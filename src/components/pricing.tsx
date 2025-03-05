@@ -24,22 +24,22 @@ export default function Pricing() {
         <div className={clsx("w-full py-16 px-4 md:px-6 lg:px-8 relative overflow-hidden bg-black", nunito.variable)}>
             <div className='max-w-7xl mx-auto text-center space-y-8'>
 
-                <div className='space-y-4'>
-                    <h3 className='text-[#B800B8] font-bold text-lg'>UNLOCK THE FULL POTENTIAL OF AI-ADGEN</h3>
-                    <h1 className='text-4xl font-semibold text-white'>Pricing Plans</h1>
-                    <p className='text-white'> Generate your ads for free and pay as you grow</p>
+                <div className='space-y-2 md:space-y-4'>
+                    <h3 className='text-[#B800B8] font-bold text-sm md:text-lg'>UNLOCK THE FULL POTENTIAL OF AI-ADGEN</h3>
+                    <h1 className='text-3xl md:text-4xl font-semibold text-white'>Pricing Plans</h1>
+                    <p className='text-white text-lg md:text-lg'> Generate your ads for free and pay as you grow</p>
                 </div>
 
                 {/* Card */}
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 text-start'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 text-start p-4 md:p-0'>
                     {pricing.map((plan, index) => (
-                        <div key={plan.id} className={clsx('p-5 rounded-2xl w-[381px] h-[539px] flex flex-col justify-between', index === 1 ? 'bg-[#B800B8] text-white' : 'bg-white text-black')}>
+                        <div key={plan.id} className={clsx('p-5 rounded-2xl md:w-[381px] h-[500px] md:h-[539px] flex flex-col justify-between', index === 1 ? 'bg-[#CF54CF] text-white' : 'bg-white text-black')}>
                             <div className='space-y-5 flex-grow'>
-                                <div className={clsx('border-b-[0.2px] pb-3 h-[9rem]', index === 1 ? 'border-white' : 'border-gray-300 text-[#B800B8]')}>
+                                <div className={clsx('border-b-[0.2px] pb-3 h-[9rem]', index === 1 ? 'border-white' : 'border-gray-300 text-[#CF54CF]')}>
 
                                 {/* Plan title  */}
                                 <div className='mb-3'>
-                                    <h2 className={clsx('text-2xl font-semibold', index === 1 ? 'text-white' : 'text-[#B800B8]')}>{plan.title}</h2>
+                                    <h2 className={clsx('text-2xl font-semibold', index === 1 ? 'text-white' : 'text-[#CF54CF]')}>{plan.title}</h2>
                                     <p className={clsx('text-sm w-[15rem] mb-5', index === 1 ? "text-gray-200 h-[2.5rem]" : "text-gray-400")}>{plan.description}</p>
                                 </div>
 
@@ -54,14 +54,14 @@ export default function Pricing() {
                                 <ul className='space-y-5 pt-5'>
                                     {plan.features.map((feature, featureIndex) => (
                                         <li key={featureIndex} className="flex items-center gap-2">
-                                        <IoCheckmark className={clsx('text-sm', index === 1 ? 'text-white' : 'text-black')} />
+                                        <IoCheckmark className={clsx('text-lg', index === 1 ? 'text-white' : 'text-black')} />
                                         {feature}
                                     </li>
                                     ))}
                                 </ul>
                             </div>
-                            <div className='flex justify-center mt-'>
-                                <button className={clsx('p-4 rounded-md font-medium cursor-pointer', index === 1 ? 'bg-white text-[#B800B8]' : 'bg-[#B800B8] text-white')}>Choose plan</button>
+                            <div className='flex justify-center mb-5'>
+                                <button className={clsx('py-4 px-6  rounded-md font-medium cursor-pointer', index === 1 ? 'bg-white text-[#B800B8]' : 'bg-[#B800B8] text-white')}>Choose plan</button>
                             </div>
                         </div>
                     ))}

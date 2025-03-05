@@ -3,21 +3,15 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import clsx from "clsx";
-import { Nunito } from "next/font/google";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
-
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-});
 
 const newsletterSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
 });
 
-export default function page() {
+export default function Page() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 

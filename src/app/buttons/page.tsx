@@ -1,6 +1,5 @@
 import {
   Arrowright,
-  Headphone,
   Layout,
   Lens,
   Mail,

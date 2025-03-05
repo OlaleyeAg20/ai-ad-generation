@@ -76,14 +76,14 @@ function Button({
       className={cn(buttonVariants({ variant, size, width, className }))}
       {...(href ? anchorProps : buttonProps)}
     >
-      <React.Fragment>
+      <div>
         {children}
         {icon && (
           <span className="inline-flex items-center transition-transform duration-300 ease-in-out group-hover:translate-x-1">
             {icon}
           </span>
         )}
-      </React.Fragment>
+      </div>
     </Comp>
   );
 }

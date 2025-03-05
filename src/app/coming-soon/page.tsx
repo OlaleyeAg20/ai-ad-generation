@@ -17,7 +17,7 @@ const newsletterSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
 });
 
-export default function page() {
+export default function Page() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 

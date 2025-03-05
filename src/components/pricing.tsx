@@ -1,8 +1,8 @@
 import React from 'react';
 import { Nunito } from "next/font/google";
 import clsx from "clsx";
-import { IoCheckmark } from "react-icons/io5";
-import { FaDollarSign } from "react-icons/fa6";
+import { Button } from "./ui/button";
+import { Tick } from './icons/icon';
 
 
 const nunito = Nunito({
@@ -33,7 +33,7 @@ export default function Pricing() {
                 {/* Card */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 text-start p-4 md:p-0'>
                     {pricing.map((plan, index) => (
-                        <div key={plan.id} className={clsx('p-5 rounded-2xl md:w-[381px] h-[500px] md:h-[539px] flex flex-col justify-between', index === 1 ? 'bg-[#CF54CF] text-white' : 'bg-white text-black')}>
+                        <div key={plan.id} className={clsx('p-5 rounded-2xl lg:w-[381px] h-[500px] md:h-[539px]  flex flex-col justify-between', index === 1 ? 'bg-[#CF54CF] text-white' : 'bg-white text-black')}>
                             <div className='space-y-5 flex-grow'>
                                 <div className={clsx('border-b-[0.2px] pb-3 h-[9rem]', index === 1 ? 'border-white' : 'border-gray-300 text-[#CF54CF]')}>
 
@@ -46,22 +46,22 @@ export default function Pricing() {
                                 <div>
                                     
                                 </div>
-                                <h3 className='text-2xl font-semibold flex items-center'>{plan.price !== "Free" && <FaDollarSign />}{plan.price} {plan.price !== "Free" && (
+                                <h3 className='text-2xl font-semibold flex items-center'>{plan.price !== "Free" && "$"}{plan.price} {plan.price !== "Free" && (
                                         <span className="text-base font-light mt-2 pl-1">/mo</span>
                                     )}</h3>
                                 </div>
 
                                 <ul className='space-y-5 pt-5'>
                                     {plan.features.map((feature, featureIndex) => (
-                                        <li key={featureIndex} className="flex items-center gap-2">
-                                        <IoCheckmark className={clsx('text-lg', index === 1 ? 'text-white' : 'text-black')} />
+                                        <li key={featureIndex} className="flex items-center gap-2 text-sm md:text-lg">
+                                        <Tick className={clsx('text-sm', index === 1 ? 'text-white' : 'text-black')} />
                                         {feature}
                                     </li>
                                     ))}
                                 </ul>
                             </div>
                             <div className='flex justify-center mb-5'>
-                                <button className={clsx('py-4 px-6  rounded-md font-medium cursor-pointer', index === 1 ? 'bg-white text-[#B800B8]' : 'bg-[#B800B8] text-white')}>Choose plan</button>
+                                <Button className={clsx(' font-medium cursor-pointer', index === 1 ? 'bg-white text-[#B800B8] hover:bg-gray-200' : 'bg-[#B800B8] text-white')}>Choose plan</Button>
                             </div>
                         </div>
                     ))}

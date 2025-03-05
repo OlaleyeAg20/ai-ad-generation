@@ -1,4 +1,4 @@
-import { CreateAd } from "@/components/create-add";
+import { CreateAd } from "@/components/create-ad";
 import FeaturesSection from "@/components/key-features";
 import NewsletterComponent from "@/components/newsletter";
 import { Faq } from "../components/faq";

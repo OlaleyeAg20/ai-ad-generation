@@ -33,11 +33,9 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
   links,
 }) => {
   return (
-    <div className="inline-flex flex-col justify-start items-start gap-[16px] w-[165px] h-[240px]">
+    <div className="inline-flex flex-col justify-start items-start gap-[16px] w-full sm:w-[165px]">
       <div className="inline-flex justify-center items-center gap-[10px]">
-        <div className="text-black text-[24px] font-[600] leading-[32px] font-nunito break-words">
-          {title}
-        </div>
+        <div className="text-black text-2xl font-semibold">{title}</div>
       </div>
       {links.map((link) => (
         <div
@@ -46,7 +44,7 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
         >
           <a
             href={link.href}
-            className="text-[#5F5F5F] text-[18px] font-[700] leading-[28px] font-manrope break-words hover:text-purple-700"
+            className="text-gray-600 text-lg font-medium hover:text-purple-700"
           >
             {link.label}
           </a>
@@ -58,10 +56,10 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
 
 const Footer: React.FC = () => {
   return (
-    <footer className=" bg-white">
-      <div className="max-w-[1294px] w-full mx-auto pt-[66px] pb-[78.202px] flex flex-col items-start gap-[68px]  ">
-        <div className="inline-flex justify-start items-start gap-[96px] w-[1282.40px] h-[240px] pr-[12px]">
-          <div className="inline-flex flex-col justify-between items-start self-stretch">
+    <footer className="bg-white">
+      <div className="max-w-6xl w-full mx-auto py-16 flex flex-col items-start gap-16 px-4 lg:px-0">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 w-full">
+          <div className="flex flex-col justify-between items-start w-full lg:w-auto">
             <div className="pl-4">
               <Link href="/">
                 <Image
@@ -73,18 +71,16 @@ const Footer: React.FC = () => {
                 />
               </Link>
             </div>
-            <div className="inline-flex flex-col justify-between items-start w-[360.40px] h-[240px]">
-              <div className="flex flex-col justify-start items-start gap-[20px] h-[104px]">
-                <div className="self-stretch">
-                  <span className="break-words text-[#B800B8] text-[28px] font-semibold leading-[36px] font-nunito">
-                    Smarter Ads,{" "}
-                  </span>
-                  <span className="break-words text-[#2A2A2A] text-[28px] font-semibold leading-[36px] font-nunito">
-                    Faster Results
-                  </span>
+            <div className="flex flex-col justify-between items-start mt-8 lg:mt-0">
+              <div className="flex flex-col justify-start items-start gap-5">
+                <div className="text-purple-700 text-2xl font-semibold">
+                  Smarter Ads,{" "}
+                </div>
+                <div className="text-gray-800 text-2xl font-semibold">
+                  Faster Results
                 </div>
               </div>
-              <div className="flex flex-col justify-start items-start gap-[24px] h-[86px]">
+              <div className="flex flex-col justify-start items-start gap-6 mt-6">
                 <div className="inline-flex justify-start items-start gap-[21px]">
                   <div className="flex justify-start items-center gap-[21px]">
                     <div className="flex justify-start items-center gap-[10px] p-[10px]">
@@ -203,21 +199,18 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="inline-flex w-[814px] h-[240px] justify-between items-start ">
+          <div className="inline-flex max-w-[814px] w-full justify-between items-start flex-wrap lg:flex-nowrap">
             <FooterColumn title="Company Info" links={companyLinks} />
             <FooterColumn title="Features" links={featuresLinks} />
             <FooterColumn title="Support & Resources" links={supportLinks} />
           </div>
         </div>
-        <div className="inline-flex justify-start items-center gap-[36px] w-[1292.77px] h-[95.8px]">
-          <div className="w-[88px] h-[96px] bg-[#F8E6F8]" />
-          <p className="w-[1168.9px] text-[#5F5F5F] text-[20px] font-normal leading-[28px] break-words">
+        <div className="inline-flex justify-start MD:items-center gap-[36px] w-full flex-col lg:flex-row">
+          <div className="w-[88px] h-[96px] bg-[#F8E6F8] mb-4 lg:mb-0" />
+          <p className="text-[#5F5F5F] text-[20px] font-normal leading-[28px] break-words md:text-center lg:text-left">
             Adgen AI helps you generate video and image advertisements tailored
-            Adgen AI helps you generate video and image adements tailored for
-            different platforms, audiences and cultural contexts, without
-            needing design or marketing expertise different platforms, audiences
-            and cultural contexts, without needing design or marketing
-            expertise.
+            for different platforms, audiences, and cultural contexts, without
+            needing design or marketing expertise.
           </p>
         </div>
       </div>

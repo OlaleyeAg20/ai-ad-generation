@@ -1,6 +1,6 @@
 import { CreateAd } from "@/components/create-ad";
 import FeaturesSection from "@/components/key-features";
-import NewsletterComponent from "@/components/newsletter";
+import { Newsletter } from "@/components/newsletter";
 import { Faq } from "../components/faq";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <FeaturesSection />
       <CreateAd />
       <Faq />
-      <NewsletterComponent />
+      <Newsletter />
     </main>
   );
 }

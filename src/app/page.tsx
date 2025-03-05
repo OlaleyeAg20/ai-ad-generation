@@ -1,4 +1,5 @@
-import { CreateAd } from "@/components/create-add";
+import { CreateAd } from "@/components/create-ad";
+import Footer from "@/components/footer";
 import FeaturesSection from "@/components/key-features";
 <<<<<<< HEAD
 import Pricing from "@/components/pricing";

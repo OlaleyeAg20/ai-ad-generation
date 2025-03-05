@@ -35,7 +35,7 @@ const page = () => {
     <div>
       <h1 style={{fontSize: '24px', textAlign: 'center', margin: '50px 0'}}>
       This is the preview page for all the icons inside
-      '@/components/icons/icon.tsx'
+      @/components/icons/icon.tsx
       </h1>
       <div
         style={{

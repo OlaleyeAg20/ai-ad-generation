@@ -221,7 +221,6 @@ const Footer: React.FC = () => {
         {/* Vector/Image placeholder */}
         <div className="w-[88px] h-[96px] bg-[#F8E6F8]" />
         <p className="w-[1168.9px] text-[#5F5F5F] text-[20px] font-normal leading-[28px] break-words">
-          Adgen AI helps you generate video and image advertisements tailored
           Adgen AI helps you generate video and image adements tailored for
           different platforms, audiences and cultural contexts, without needing
           design or marketing expertise different platforms, audiences and

@@ -1,6 +1,6 @@
 "use client";
 
-import { Arrowdown } from "@/components/icons/icon";
+import { Chevrondown } from "@/components/icons/icon";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import * as React from "react";
 
@@ -41,7 +41,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <Arrowdown className="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 transition-transform duration-200 rotate-180" />
+        <Chevrondown className="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 transition-transform duration-200 rotate-180" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col gap-4 items-center pt-[100px] overflow-hidden">
+    <section className="relative flex flex-col gap-4 items-center pt-[100px] overflow-auto">
       {/* Background Images */}
       <Image
         src="/images/videochat.png"
@@ -39,7 +39,7 @@ export default function Hero() {
       <Button icon={<Arrowright />}>Generate New Ad</Button>
 
       {/* Image Carousel */}
-      <div className="flex gap-2 overflow-hidden py-8 w-full">
+      <div className="flex gap-2 overflow-auto py-8 w-full">
         <Image
           className="-rotate-4 rounded-2xl -translate-x-8 w-[200px] sm:w-[348px]"
           src="/images/anessa.jpg"

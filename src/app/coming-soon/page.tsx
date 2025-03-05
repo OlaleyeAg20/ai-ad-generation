@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import clsx from "clsx";
 import { Nunito } from "next/font/google";
-import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -52,30 +51,6 @@ export default function page() {
         "w-full py-16 px-4 md:px-6 lg:px-8 bg-white relative overflow-hidden"
       )}
     >
-      <div className="absolute inset-0 z-20 ">
-        <Image
-          src="/waves-svg.svg"
-          alt="Background pattern"
-          fill
-          style={{ objectFit: "cover" }}
-          quality={100}
-        />
-        <Image
-          src="/waves-svg.svg"
-          alt="Background pattern"
-          fill
-          style={{ objectFit: "cover" }}
-          quality={100}
-        />
-        <Image
-          src="/waves-svg.svg"
-          alt="Background pattern"
-          fill
-          style={{ objectFit: "cover" }}
-          quality={100}
-        />
-      </div>
-
       <div className="max-w-[756px] w-full flex flex-col gap-8 mx-auto text-center relative">
         <div className="flex flex-col gap-6">
           <h1 className="text-[#290029] font-extrabold text-[64px] leading-[76px]">

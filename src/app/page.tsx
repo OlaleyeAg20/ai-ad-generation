@@ -8,10 +8,14 @@ import { Faq } from "../components/faq";
 export default function Home() {
   return (
     <main>
+      <Hero />
       <FeaturesSection />
       <Pricing />
       <CreateAd />
+      <Pricing />
       <Faq />
+      <Newsletter />
+      <Footer />
       <Newsletter />
       <Footer />
     </main>
